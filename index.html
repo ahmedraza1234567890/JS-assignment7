@@ -17,99 +17,219 @@
 
 
     <script>
-        // 1
-        var city = prompt("Enter Your is City Name");
-        if (city === "karachi") {
-            alert("“Welcome to city of lights”");
-        }
+            // 1
+            var city = prompt("Enter Your is City Name");
+            if (city === "karachi") {
+                alert("“Welcome to city of lights”");
+            }
 
 
-        // 2
-        var gender = prompt("Enter Your Gender");
-        if (gender === "male") {
-            alert("Good Morning Sir.");
-        }
-        else if (gender === "female") {
-            alert("Good Morning Ma'am.");
-        }
+            // 2
+            var gender = prompt("Enter Your Gender");
+            if (gender === "male") {
+                alert("Good Morning Sir.");
+            }
+            else if (gender === "female") {
+                alert("Good Morning Ma'am.");
+            }
 
 
-        // 3
-        var color = prompt("Signal color");
-        if (color === "red") {
-            alert("Must Stop");
+            // 3
+            var color = prompt("Signal color");
+            if (color === "red") {
+                alert("Must Stop");
+            }
+            else if (color === "yellow") {
+                alert("Ready to move");
+            }
+            else if (color === "green") {
+                alert("Move now");
+            }
+
+            // 4
+            var litre = prompt("Enter fuel in litre")
+            if (litre <= 0.25) {
+                alert("Please refill the fuel in your car")
+            }
+            else {
+                alert("The fuel is still available")
+            }
+
+            // 5
+            // a.
+            var a = 4;
+            if (++a === 5) {
+                alert("given condition for variable a is true");
+                document.write("(A) work true<br><br>");
+            }
+
+            // b
+            var b = 82;
+            if (b++ === 83) {
+                alert("given condition for variable b is true");
+            }
+            document.write("(B) work not true<br><br>");
+
+            // c.
+            var c = 12;
+            if (c++ === 13) {
+                alert("condition 1 is true");
+            }
+            if (c === 13) {
+                alert("condition 2 is true");
+            }
+            if (++c < 14) {
+                alert("condition 3 is true");
+            }
+            if (c === 14) {
+                alert("condition 4 is true");
+            }
+            document.write("(C) condition 1 is not true<br>")
+            document.write("(C) condition 2 is true<br>")
+            document.write("(C) condition 3 is not true<br>")
+            document.write("(C) condition 4 is true<br><br>")
+
+
+            // d.
+            var materialCost = 20000;
+            var laborCost = 2000;
+            var totalCost = materialCost + laborCost;
+            if (totalCost === laborCost + materialCost) {
+                alert("The cost equals");
+                document.write("(D) is true<br><br>");
+            }
+
+            // e.
+            if(true){
+                alert("True");
+            }
+            if (false) {
+                alert("False");
+            }
+            document.write("(E) is 1 true<br>")
+            document.write("(E) is 2 not true<br><br><br>")
+
+
+
+            // marksheet
+            document.write("Marks Sheet<br><br>");
+            var totalMarks = prompt("Total Marks");
+            var obtained = prompt("Obtained Marks");
+            var percen = (obtained / totalMarks) * 100;
+
+
+            document.write("Total marks : "+ totalMarks + "<br>")
+            document.write("Total marks : "+ obtained + "<br>")
+            document.write("Total marks : "+ percen + "%<br>")
+
+            if(percen >= 80){
+                document.write("Grade : A-one <br>")
+                document.write("Remarks : Excellent<br><br><br>")
+            }
+            else if(percen >= 70){
+                document.write("Grade : A<br>")
+                document.write("Remarks : good <br><br><br>")
+
+            }
+           else if(percen >= 60){
+                document.write("Grade : B<br>")
+                document.write("Remarks : You need to improve<br><br><br>")
+
+            }
+           else if(percen < 60){
+                document.write("Grade : Fail<br>")
+                document.write("Remarks : Sorry<br><br><br>")
+
+            }
+
+            7.
+            document.write("Guess game:<br> Secret number ranging from 1 to 10 <br><br>")
+            var typeNum = prompt("Enter secret number");
+            var secretNum = 5;
+            
+            if (secretNum == typeNum ){
+                document.write("Bingo! Correct<br><br><br>")
+            }
+            else if ((typeNum == secretNum  -1 ||typeNum == secretNum +1)){
+                document.write("Close enough to the correct answer.<br><br><br>")
+            }
+            else {
+                document.write("Sorry! wrong answer.<br><br><br>")
+            }
+
+            // 8
+            var divison = 3
+            var add = prompt("Write the number that is divisible by 3")
+
+            if(add % divison === 0){
+                document.write("is divisible by 3.<br><br>")
+            }
+            // 9
+            var number = prompt ("enter your even or odd number")
+
+            if (number % 2 === 0){
+                alert ("This is Even number")
+            }
+            else {
+                alert("This is Odd number")
+            }
+
+
+        10
+        var temp = prompt("enter your temperature")
+
+        if (temp >= 40){
+            document.write("It is too hot outside.<br><br>")
         }
-        else if (color === "yellow") {
-            alert("Ready to move");
+        else if (temp >= 30){
+            document.write("The Weather today is Normal.<br><br>")
         }
-        else if (color === "green") {
-            alert("Move now");
+        else if (temp >= 20){
+            document.write("Today’s Weather is cool.<br><br>")
+        }
+        else if (temp >= 10){
+            document.write("OMG! Today’s weather is so Cool.<br><br>")
         }
 
-        // 4
-        var litre = prompt("Enter fuel in litre")
-        if (litre <= 0.25) {
-            alert("Please refill the fuel in your car")
+        11
+        var num1 = +prompt("enter num1 ")
+        var num2 = +prompt("enter num2 ")
+        var opr = prompt("Your type opr +, -, -, *, / ")
+        var ans = "answer "
+
+        if (opr == "+") {
+            document.write("First number " + num1 + "<br>")
+            document.write("Second number " + num2 + "<br>")
+            document.write("Operation " + opr + "<br>")
+            document.write(ans + (num1 + num2))
+        }
+        else if (opr == "-") {
+            document.write("First number " + num1, "<br>")
+            document.write("Second number " + num2, "<br>")
+            document.write("Operation " + opr, "<br>")
+            document.write(ans, num1 - num2)
+        }
+        else if (opr == "*") {
+            document.write("First number " + num1, "<br>")
+            document.write("Second number " + num2, "<br>")
+            document.write("Operation " + opr, "<br>")
+            document.write(ans, num1 * num2)
+        }
+        else if (opr == "/") {
+            document.write("First number " + num1, "<br>")
+            document.write("Second number " + num2, "<br>")
+            document.write("Operation " + opr, "<br>")
+            document.write(ans, num1 / num2)
+        }
+        else if (opr == "%") {
+            document.write("First number " + num1, "<br>")
+            document.write("Second number " + num2, "<br>")
+            document.write("Operation " + opr, "<br>")
+            document.write(ans, num1 % num2)
         }
         else {
-            alert("The fuel is still available")
+            alert("Plzz right sign type for +, /, -, * ")
         }
-
-        // 5
-        // a.
-        var a = 4;
-        if (++a === 5) {
-            alert("given condition for variable a is true");
-            document.write("(A) work true<br><br>");
-        }
-
-        // b
-        var b = 82;
-        if (b++ === 83) {
-            alert("given condition for variable b is true");
-        }
-        document.write("(B) work not true<br><br>");
-
-        // c.
-        var c = 12;
-        if (c++ === 13) {
-            alert("condition 1 is true");
-        }
-        if (c === 13) {
-            alert("condition 2 is true");
-        }
-        if (++c < 14) {
-            alert("condition 3 is true");
-        }
-        if (c === 14) {
-            alert("condition 4 is true");
-        }
-        document.write("(C) condition 1 is not true<br>")
-        document.write("(C) condition 2 is true<br>")
-        document.write("(C) condition 3 is not true<br>")
-        document.write("(C) condition 4 is true<br><br>")
-
-
-        // d.
-        var materialCost = 20000;
-        var laborCost = 2000;
-        var totalCost = materialCost + laborCost;
-        if (totalCost === laborCost + materialCost) {
-            alert("The cost equals");
-            document.write("(D) is true<br><br>");
-        }
-
-        // e.
-        if(true){
-            alert("True");
-        }
-        if (false) {
-            alert("False");
-        }
-        document.write("(E) is 1 true<br>")
-        document.write("(E) is 2 not true")
-
-
     </script>
 </body>
 
